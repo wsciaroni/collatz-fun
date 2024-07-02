@@ -1,5 +1,6 @@
-# cpp-application-template
-C++ Project Template
+# Collatz Fun
+
+Calculating the Collatz sequence in parallel
 
 ## Building
 

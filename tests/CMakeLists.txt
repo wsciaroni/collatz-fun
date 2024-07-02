@@ -10,9 +10,9 @@ if(BUILD_TESTING)
         testLib
         PUBLIC
         coreLib
-        GTest::gtest_main
         GTest::gmock_main
     )
+    target_include_directories(testLib PUBLIC "${CMAKE_CURRENT_LIST_DIR}/unittests")
 
     include(GoogleTest)
     gtest_discover_tests(testLib)
