@@ -4,13 +4,14 @@
 #include "MockDictionary.hpp"
 
 #include <gtest/gtest.h>
+#include <cstdint>
 
 class FakeDictionary : public IDictionary
 {
 public:
-    bool isInDict(const uint128_t value) override { return false; };
-    void insert(const uint128_t key, const uint128_t value) override {};
-    uint128_t get(const uint128_t key) override { return key; };
+    bool isInDict(const uint64_t value) override { return false; };
+    void insert(const uint64_t key, const uint64_t value) override {};
+    uint64_t get(const uint64_t key) override { return key; };
 };
 
 TEST(IDictionary, isInDict)

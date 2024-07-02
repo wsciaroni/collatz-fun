@@ -13,25 +13,25 @@ public:
     CollatzSolver() : fake(), d(fake) {}
     CollatzSolver(DictType &dictionaryIn) : fake(), d(dictionaryIn) {}
 
-    uint128_t solve(const uint128_t value)
+    uint64_t solve(const uint64_t value)
     {
         return solve_impl(value, std::is_base_of<IDictionary, DictType>{});
     };
 
 private:
-    bool isEven(const uint128_t value)
+    bool isEven(const uint64_t value)
     {
         return 0 == (value % 2);
     }
     template <typename T = DictType> // Add template parameter T here
-    uint128_t solve_impl(const uint128_t value, std::true_type)
+    uint64_t solve_impl(const uint64_t value, std::true_type)
     {
         if (d.isInDict(value))
         {
             return d.get(value);
         }
 
-        uint128_t answer;
+        uint64_t answer;
         if (1 == value)
         {
             answer = 0;
@@ -49,7 +49,7 @@ private:
     }
 
     template <typename T = DictType> // Add template parameter T here
-    uint128_t solve_impl(const uint128_t value, std::false_type)
+    uint64_t solve_impl(const uint64_t value, std::false_type)
     {
         if (1 == value)
         {

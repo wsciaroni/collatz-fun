@@ -1,11 +1,11 @@
 #pragma once
 
-using uint128_t = unsigned __int128;
+#include <cstdint>
 
 class IDictionary
 {
 public:
-    virtual bool isInDict(const uint128_t value) { return false; };
-    virtual void insert(const uint128_t key, const uint128_t value) { return; };
-    virtual uint128_t get(const uint128_t key) { return 0; };
+    virtual bool isInDict(const uint64_t value) = 0;
+    virtual void insert(const uint64_t key, const uint64_t value) = 0;
+    virtual uint64_t get(const uint64_t key) = 0;
 };
