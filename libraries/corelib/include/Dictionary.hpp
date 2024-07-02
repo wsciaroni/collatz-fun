@@ -5,6 +5,7 @@
 #include <atomic>
 #include <unordered_map>
 #include <shared_mutex>
+#include <mutex>
 
 class KeyNotFoundException : std::exception {};
 
