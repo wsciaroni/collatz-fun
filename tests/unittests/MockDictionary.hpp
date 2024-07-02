@@ -2,9 +2,11 @@
 
 #include <gmock/gmock.h>
 
+#include "IDictionary.hpp"
+
 using uint128_t = unsigned __int128;
 
-class MockDictionary
+class MockDictionary : public IDictionary
 {
 public:
     MockDictionary(/* args */);

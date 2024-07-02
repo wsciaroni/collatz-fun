@@ -3,12 +3,10 @@
     "configurePresets": [
         {
             "name": "Default",
-            "displayName": "GCC 9.3.0 x86_64-linux-gnu",
-            "description": "Using compilers: C = /bin/x86_64-linux-gnu-gcc-9",
+            "displayName": "Default",
             "binaryDir": "${sourceDir}/build",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/install",
-                "CMAKE_C_COMPILER": "/bin/x86_64-linux-gnu-gcc-9",
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         }
